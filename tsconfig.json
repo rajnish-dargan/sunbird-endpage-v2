@@ -17,6 +17,14 @@
     "lib": [
       "es2018",
       "dom"
-    ]
+    ],
+    "paths": {
+      "endpage-v2": [
+        "dist/endpage-v2"
+      ],
+      "endpage-v2/*": [
+        "dist/endpage-v2/*"
+      ]
+    }
   }
 }
