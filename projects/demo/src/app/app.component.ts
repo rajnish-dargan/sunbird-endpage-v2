@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
@@ -10,28 +9,29 @@ export class AppComponent implements OnInit {
   endPageConfig: object;
   contentDetails: object;
   pdfEndData: object;
-
   ngOnInit() {
     this.endPageConfig = {
       showMessage: true,
       showContentInfo: true,
       showClockIcon: true,
-      showAuthor: true,
+      showAuthor: false,
       showReplay: true,
       showExit: true,
       showUser: true
     };
-
     this.contentDetails = {
       message: 'You Just Completed',
       timeLabel: 'TIME',
-      'content-info' : 'B301,B302_STD_1_TAMIL,ENGLISH_LANG_TERM 1_OPT',
-      clockIcon: '/assets/clock.png',
+      contentInfo: 'Geeta Gayan',
+      clockIcon: 'assets/new/clock.svg',
       author: 'Universal Learning Aid (Let"s tute)',
-      replayIcon: 'assets/replay.png',
-      exitIcon: 'assets/exit.png',
+      authorLabel: 'author',
+      replayIcon: 'assets/new/icn_replay.png',
+      replayLabel: 'replay',
+      exitIcon: 'assets/new/home.png',
+      exitLabel: 'exit',
+      user: 'anonymous'
     };
-
     this.pdfEndData = {
       eventType: 'END',
       metaData: {
@@ -82,8 +82,6 @@ export class AppComponent implements OnInit {
       }
     };
   }
-
-
   public EndPageEventHandler(valueEmitted) {
     console.log('Telemetry Events:', valueEmitted);
   }

@@ -27,11 +27,15 @@ export interface EndPageConfig {
 
 export interface ContentDetails {
     message: string;
-    'content-info': string;
+    contentInfo: string;
     clockIcon: string;
     author: string;
+    authorLabel: string;
     replayIcon: string;
+    replayLabel: string;
     exitIcon: string;
+    exitLabel: string;
+    user: string;
 }
 
 
